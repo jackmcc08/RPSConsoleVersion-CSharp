@@ -7,6 +7,7 @@ namespace RPSConsoleVersion
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.Write("Test");
         }
     }
 }
