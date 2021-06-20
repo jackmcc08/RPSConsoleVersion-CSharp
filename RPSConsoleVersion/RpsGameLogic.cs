@@ -17,7 +17,11 @@ namespace RPSConsoleVersion
 
         public string TurnResult(string playerOneMove, string playerTwoMove)
         {
-            if (playerOneMove == "paper" && playerTwoMove == "rock")
+            if (playerOneMove == playerTwoMove)
+            {
+                return "Draw!";
+            }
+            else if (playerOneMove == "paper" && playerTwoMove == "rock")
             {
                 return "Player 1 Wins!";
             }
