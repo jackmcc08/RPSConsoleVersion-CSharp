@@ -13,7 +13,7 @@ namespace RPSConsoleVersion
             GenerateWinMatrix();
         }
 
-        private Dictionary<string, string> WinMatrix = new Dictionary<string, string>();
+        readonly Dictionary<string, string> WinMatrix = new Dictionary<string, string>();
 
         public string TurnResult(string playerOneMove, string playerTwoMove)
         {
@@ -21,7 +21,7 @@ namespace RPSConsoleVersion
             {
                 return "Draw!";
             }
-            else if (playerOneMove == "paper" && playerTwoMove == "rock")
+            else if (WinMatrix[playerOneMove] == playerTwoMove)
             {
                 return "Player 1 Wins!";
             }
