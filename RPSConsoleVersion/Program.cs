@@ -9,7 +9,7 @@ namespace RPSConsoleVersion
             Console.WriteLine("Hello World!");
             Console.Write("Test");
 
-            RpsGameLogic test = new RpsGameLogic();
+            RpsGameLogic test = new();
             Console.WriteLine(test.TurnResult("paper", "rock"));
 
         }

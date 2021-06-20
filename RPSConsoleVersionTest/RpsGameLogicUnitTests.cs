@@ -13,7 +13,7 @@ namespace RPSConsoleVersionTest
             string expected = "Player 1 Wins!";
 
             // Act
-            RpsGameLogic testGame = new RpsGameLogic();
+            RpsGameLogic testGame = new();
             string p1Move = "paper";
             string p2Move = "rock";
             string actual = testGame.TurnResult(p1Move, p2Move);
@@ -30,7 +30,7 @@ namespace RPSConsoleVersionTest
             string expected = "Player 1 Wins!";
 
             // Act
-            RpsGameLogic testGame = new RpsGameLogic();
+            RpsGameLogic testGame = new();
             string p1Move = "rock";
             string p2Move = "scissors";
             string actual = testGame.TurnResult(p1Move, p2Move);
@@ -47,7 +47,7 @@ namespace RPSConsoleVersionTest
             string expected = "Player 2 Wins!";
 
             // Act
-            RpsGameLogic testGame = new RpsGameLogic();
+            RpsGameLogic testGame = new();
             string p1Move = "paper";
             string p2Move = "scissors";
             string actual = testGame.TurnResult(p1Move, p2Move);
@@ -64,7 +64,7 @@ namespace RPSConsoleVersionTest
             string expected = "Draw!";
 
             // Act
-            RpsGameLogic testGame = new RpsGameLogic();
+            RpsGameLogic testGame = new();
             string p1Move = "paper";
             string p2Move = "paper";
             string actual = testGame.TurnResult(p1Move, p2Move);
@@ -84,7 +84,7 @@ namespace RPSConsoleVersionTest
 
 
             // Act
-            RpsGameLogic testGame = new RpsGameLogic();
+            RpsGameLogic testGame = new();
             string actual1 = testGame.TurnResult("scissors", "paper");
             string actual2 = testGame.TurnResult("rock", "paper");
             string actual3 = testGame.TurnResult("scissors", "rock");

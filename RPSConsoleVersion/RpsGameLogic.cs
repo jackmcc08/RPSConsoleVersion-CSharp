@@ -13,7 +13,7 @@ namespace RPSConsoleVersion
             GenerateWinMatrix();
         }
 
-        readonly Dictionary<string, string> WinMatrix = new Dictionary<string, string>();
+        readonly Dictionary<string, string> WinMatrix = new();
 
         public string TurnResult(string playerOneMove, string playerTwoMove)
         {
