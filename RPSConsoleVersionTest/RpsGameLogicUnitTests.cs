@@ -73,5 +73,33 @@ namespace RPSConsoleVersionTest
             string failureMessage = "The correct result - draw was not returned, with P1Move - Paper, P2Move - Paper";
             Assert.AreEqual(expected, actual, false, failureMessage);
         }
+
+        [TestMethod]
+        public void AdditionalScenarios()
+        {
+            // Arrange
+            string expected1 = "Player 1 Wins!";
+            string expected2 = "Player 2 Wins!";
+            string expected3 = "Draw!";
+
+
+            // Act
+            RpsGameLogic testGame = new RpsGameLogic();
+            string actual1 = testGame.TurnResult("scissors", "paper");
+            string actual2 = testGame.TurnResult("rock", "paper");
+            string actual3 = testGame.TurnResult("scissors", "rock");
+            string actual4 = testGame.TurnResult("rock", "rock");
+            string actual5 = testGame.TurnResult("scissors", "scissors");
+
+
+            // Assert
+            string failureMessage = "The correct result was not returned";
+            Assert.AreEqual(expected1, actual1, false, failureMessage);
+            Assert.AreEqual(expected2, actual2, false, failureMessage);
+            Assert.AreEqual(expected2, actual3, false, failureMessage);
+            Assert.AreEqual(expected3, actual4, false, failureMessage);
+            Assert.AreEqual(expected3, actual5, false, failureMessage);
+
+        }
     }
 }
