@@ -10,8 +10,10 @@ namespace RPSConsoleVersion
     {
         public RpsGameLogic()
         {
-
+            GenerateWinMatrix();
         }
+
+        private Dictionary<string, string> WinMatrix = new Dictionary<string, string>();
 
         public string TurnResult(string playerOneMove, string playerTwoMove)
         {
@@ -19,7 +21,17 @@ namespace RPSConsoleVersion
             {
                 return "Player 1 Wins!";
             }
-            return null;
+            else
+            {
+                return "Player 2 Wins!";
+            }
+        }
+
+        private void GenerateWinMatrix()
+        {
+            WinMatrix.Add("paper", "rock");
+            WinMatrix.Add("rock", "scissors");
+            WinMatrix.Add("scissors", "paper");
         }
     }
 }
