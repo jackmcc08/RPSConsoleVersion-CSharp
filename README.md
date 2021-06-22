@@ -2,7 +2,13 @@
 
 ## Rock Paper Scissors Console Version
 
-Developing a rock paper scissors version via TDD to learn the C#.NET stack. 
+Developing a rock paper scissors version via TDD to learn the C#.NET stack.
+
+The program is written in C# and was developed mostly via TDD. It has a command line interface and allows you to play with 1 or 2 players.
+
+Working through this project, I explored some new areas:
+- Dependency Injection - cut out the user input into it's own class to allow for injection of an alternate testing method. Did not need in the end as used an alternate method for automating user input.
+- Console.SetIn - used the setin method to redirect Console.ReadLine Requests from the Console to a text file.
 
 ## To Use
 - Git clone repository
@@ -17,6 +23,8 @@ Developing a rock paper scissors version via TDD to learn the C#.NET stack.
 
 ## Structure
 
+- Program
+	- Initiates program in Console and calls the various classes
 - RPS Game Loop - 
 	- Asks for user input
 	- Checks user input
@@ -25,7 +33,8 @@ Developing a rock paper scissors version via TDD to learn the C#.NET stack.
 	- checks if user wants to end 
 
 - RPS Game Logic 
-	- checks winners - Done
-- RPS Computer Opponents
+	- checks winner based on choices
+
 - RPS Game Logger
 	- stores results
+	- determines overall winners
