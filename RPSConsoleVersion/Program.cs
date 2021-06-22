@@ -9,7 +9,7 @@ namespace RPSConsoleVersion
             Console.WriteLine("Welcome to the Thunderdome!");
             Console.WriteLine("\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/");
            
-            // Number of Players
+  
             int numPlayers = 0;
             do
             {
@@ -27,25 +27,15 @@ namespace RPSConsoleVersion
 
             Console.WriteLine($"You selected {numPlayers} players.");
 
-            // Initialise various classes
             RpsGameLogger log = new();
             RpsGameLoop game = new(numPlayers, log);
 
             game.GameLoop();
 
-            string result = log.DetermineWinner();
-            Console.WriteLine($"\n\n{result}");
+            string gameResult = log.DetermineWinner();
+            Console.WriteLine($"\n\n{gameResult}");
 
             Console.WriteLine("\n\n\nReload Game to Play again.");
-
-
-            
-            // Greeting
-            // Initialize 
-            // Select one or two players
-            // Initiate game loop
-            // end game scores
-
         }
     }
 }
