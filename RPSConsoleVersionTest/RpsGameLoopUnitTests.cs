@@ -18,7 +18,7 @@ namespace RPSConsoleVersionTest
             string expected = "paper";
 
             //  Act
-            RpsGameLoop testGame = new();
+            RpsGameLoop testGame = new RpsGameLoop(1);
             string actual = testGame.GetPlayerMove(testChoicePaper);
             // https://stackoverflow.com/questions/3161341/c-sharp-unit-test-for-a-method-which-calls-console-readline
             // https://stackoverflow.com/questions/2082615/pass-method-as-parameter-using-c-sharp

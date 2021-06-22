@@ -20,8 +20,16 @@ namespace RPSConsoleVersion
         public int Draws { get; private set; }
 
 
-        public void IncrementScore(string result)
+        public void IncrementScore(string roundResult)
         {
+            switch (roundResult)
+            {
+                case "Player 1 Wins!":
+                    PlayerOneScore++;
+                    break;
+                default:
+                    break;
+            }
 
         }
     }
