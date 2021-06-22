@@ -27,9 +27,20 @@ namespace RPSConsoleVersion
                 case "Player 1 Wins!":
                     PlayerOneScore++;
                     break;
+                case "Player 2 Wins!":
+                    PlayerTwoScore++;
+                    break;
+                case "Draw!":
+                    Draws++;
+                    break;
                 default:
                     break;
             }
+
+        }
+
+        public void DetermineWinner()
+        {
 
         }
     }
