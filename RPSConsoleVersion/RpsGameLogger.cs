@@ -39,7 +39,7 @@ namespace RPSConsoleVersion
 
         }
 
-        public void DetermineWinner()
+        public string DetermineWinner()
         {
 
         }

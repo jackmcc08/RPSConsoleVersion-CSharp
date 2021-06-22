@@ -45,5 +45,24 @@ namespace RPSConsoleVersion.Tests
             Assert.AreEqual(expectedP2Score, actualP2Score, "Score Logger did not increment P2 score by 1.");
             Assert.AreEqual(expectedDraws, actualDrawScore, "Score Logger did not increment Draws score by 1.");
         }
+
+        [TestMethod]
+        public void DeterminesWinnerAfterP1WinsTwoRounds_P2WinsOneRound()
+        {
+            // Arrange
+            string expected = "Player 1 is the Winner!";
+
+            // Act
+            RpsGameLogger testLogger = new();
+            testLogger.IncrementScore("Player 2 Wins!");
+            testLogger.IncrementScore("Player 1 Wins!");
+            testLogger.IncrementScore("Player 1 Wins!");
+
+            string actualResult = testLogger.DetermineWinner();
+
+            // Assert
+            Assert.AreEqual(expected, actualResult, false, "logger did not correctly determine who won");
+
+        }
     }
 }
