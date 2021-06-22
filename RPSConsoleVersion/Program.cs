@@ -28,13 +28,15 @@ namespace RPSConsoleVersion
             Console.WriteLine($"You selected {numPlayers} players.");
 
             // Initialise various classes
-            // initialise game logger
-            RpsGameLoop game = new(numPlayers);
+            RpsGameLogger log = new();
+            RpsGameLoop game = new(numPlayers, log);
 
             game.GameLoop();
 
-            string result = "X wins!";
+            string result = log.DetermineWinner();
             Console.WriteLine($"\n\n{result}");
+
+            Console.WriteLine("\n\n\nReload Game to Play again.");
 
 
             

@@ -31,10 +31,16 @@ namespace RPSConsoleVersionTest
         public void GameLoopRunsTheGame_GeneratesAScoreInTheLogger()
         {
             // Arrange
+            int expectedP1Score = 2;
 
             // Act
+            RpsGameLogger testLogger = new RpsGameLogger();
+            RpsGameLoop testGame = new RpsGameLoop(2, testLogger);
+            testGame.GameLoop();
+            int actualP1Score = testLogger.PlayerOneScore;
 
             // Assert
+            Assert.AreEqual(expectedP1Score, actualP1Score, "Player 1 Score is not what was expected.")
 
         }
     }
