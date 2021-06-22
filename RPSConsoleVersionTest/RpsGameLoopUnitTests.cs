@@ -40,6 +40,7 @@ namespace RPSConsoleVersionTest
             // Arrange
             // the below code redirects the Console.Readline to a text file
             // which the test will take input from instead of looking for it from the Console.
+            // https://www.dotnetperls.com/console-setout - this site gave me the insight needed in how to implement SetIn.
             string workingDirectory = Environment.CurrentDirectory;
             string directory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
             StreamReader reader = new StreamReader($"{directory}\\testText1.txt");
