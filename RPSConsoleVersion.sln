@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSConsoleVersion", "RPSConsoleVersion\RPSConsoleVersion.csproj", "{61204878-DF94-4445-B824-8E3A4323C319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSConsoleVersionTest", "RPSConsoleVersionTest\RPSConsoleVersionTest.csproj", "{DA5F57C5-265A-4FA2-8C22-DC1AC76C6866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSConsoleVersionTest", "RPSConsoleVersionTest\RPSConsoleVersionTest.csproj", "{DA5F57C5-265A-4FA2-8C22-DC1AC76C6866}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F26818C-D405-4716-97FC-8F598FFD3CDF}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
