@@ -44,15 +44,22 @@ namespace RPSConsoleVersionTest
 
             Console.SetIn(reader);
             int expectedP1Score = 2;
+            int expectedP2Score = 1;
+            string expectedWinner = "Player 1 is the Winner!";
 
             // Act
             RpsGameLogger testLogger = new RpsGameLogger();
             RpsGameLoop testGame = new RpsGameLoop(2, testLogger);
             testGame.GameLoop();
             int actualP1Score = testLogger.PlayerOneScore;
+            int actualP2Score = testLogger.PlayerTwoScore;
+            string actualWinner = testLogger.DetermineWinner();
+
 
             // Assert
             Assert.AreEqual(expectedP1Score, actualP1Score, "Player 1 Score is not what was expected.");
+            Assert.AreEqual(expectedP2Score, actualP2Score, "Player 2 Score is not what was expected.");
+            Assert.AreEqual(expectedWinner, actualWinner, "Correct Winner was not determined.");
 
         }
     }

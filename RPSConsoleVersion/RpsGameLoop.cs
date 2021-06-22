@@ -37,7 +37,15 @@ namespace RPSConsoleVersion
 
                 if (NumPlayers == 2)
                 {
-                  /*  Console.Clear();*/
+                    try 
+                    { 
+                        Console.Clear(); 
+                    }
+                    catch
+                    {
+                        // Ignore error and continue program - this catcher is here because of the test framework.
+                    }
+                  
                     Console.WriteLine("Player 2 Move - Player 1 look away!");
                     pTwoChoice = PlayerMove();
                 }
