@@ -41,7 +41,18 @@ namespace RPSConsoleVersion
 
         public string DetermineWinner()
         {
-            return "Player 1 is the Winner!";
+            if (PlayerOneScore == PlayerTwoScore)
+            {
+                return "Its a Draw!"
+;            }
+            else if (PlayerOneScore > PlayerTwoScore)
+            {
+                return "Player 1 is the Winner!";
+            }
+            else
+            {
+                return "Player 2 is the Winner!";
+            }
         }
     }
 }

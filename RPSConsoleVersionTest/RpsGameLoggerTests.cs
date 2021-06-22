@@ -64,5 +64,40 @@ namespace RPSConsoleVersion.Tests
             Assert.AreEqual(expected, actualResult, false, "logger did not correctly determine who won");
 
         }
+
+        [TestMethod]
+        public void DeterminesWinnerAfterP1WinsZeroRounds_P2WinsOneRound()
+        {
+            // Arrange
+            string expected = "Player 2 is the Winner!";
+
+            // Act
+            RpsGameLogger testLogger = new();
+            testLogger.IncrementScore("Player 2 Wins!");
+
+            string actualResult = testLogger.DetermineWinner();
+
+            // Assert
+            Assert.AreEqual(expected, actualResult, false, "logger did not correctly determine who won");
+
+        }
+
+        [TestMethod]
+        public void DeterminesWinnerAfterP1WinsOneRounds_P2WinsOneRound()
+        {
+            // Arrange
+            string expected = "Its a Draw!";
+
+            // Act
+            RpsGameLogger testLogger = new();
+            testLogger.IncrementScore("Player 2 Wins!");
+            testLogger.IncrementScore("Player 1 Wins!");
+
+            string actualResult = testLogger.DetermineWinner();
+
+            // Assert
+            Assert.AreEqual(expected, actualResult, false, "logger did not correctly determine who won");
+
+        }
     }
 }
