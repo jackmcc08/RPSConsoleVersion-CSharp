@@ -41,7 +41,7 @@ namespace RPSConsoleVersion
 
         public string DetermineWinner()
         {
-
+            return "Player 1 is the Winner!";
         }
     }
 }
